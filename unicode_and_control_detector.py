@@ -44,4 +44,4 @@ if __name__ == "__main__":
 
     # raise error if unicode is just atrocious
     if unicodeerror > 5:
-        raise StandardError("ERROR: Too many Unicode errors")
+        raise Exception("ERROR: Too many Unicode errors")
