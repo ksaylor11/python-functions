@@ -1,3 +1,6 @@
+# custom entries
+*.json
+.idea/
 
 # Created by https://www.gitignore.io/api/python,visualstudiocode
 

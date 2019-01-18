@@ -15,20 +15,24 @@ def find_encoding_problems(line, line_number, counter):
         print("WARNING: Encoding error in line", i+1)
         counter += 1
 
+
 def find_tab_characters(line, line_number):
-    if (re.search(r'\t', line) is not None):
+    if re.search(r'\t', line) is not None:
         print("WARNING: tab character located on line", line_number)
 
+
 def find_backslash_characters(line, line_number):
-    if (re.search(r"\\", line) is not None):
+    if re.search(r"\\", line) is not None:
         print("WARNING: backslash character located on line", line_number)
 
+
 def find_single_tick_characters(line, line_number):
-    if (re.search(r"[^\']\'[^\']", line) is not None):
+    if re.search(r"[^\']\'[^\']", line) is not None:
         print("WARNING: single tick character located on line",line_number)
 
+
 if __name__ == "__main__":
-    filename = "file.json"
+    filename = "C:\\path\\to\\file.json"
     unicodeerror = 0
     for i, line in enumerate(open(filename, "r", encoding="latin")):
         # calculate line number
